@@ -1,0 +1,56 @@
+/* stylelint-disable */
+// Mixins
+@mixin transition ($seconds) {
+  -webkit-transition: all $seconds;
+  -moz-transition: all $seconds;
+  -ms-transition: all $seconds;
+  transition: all $seconds;
+}
+
+@mixin cover() {
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@mixin cover-bg($url) {
+  background: url($url);
+  background-attachment: fixed;
+
+  @include cover();
+}
+
+@mixin cover-bg-overlay($url) {
+  background: dark-opacity(0.25), url($url);
+  background-attachment: fixed;
+
+  @include cover();
+}
+
+@mixin pageLoad() {
+  // make things invisible upon start
+  opacity: 0; // use fadeIn ease-in and repeat it only 1 time
+  -webkit-animation: fadeIn ease-in-out 1;
+  -moz-animation: fadeIn ease-in-out 1;
+
+  animation: fadeIn ease-in 1; // opacity = 1 after load
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; // animation duration
+  -webkit-animation-duration: 0.25s;
+  -moz-animation-duration: 0.25s;
+  animation-duration: 0.25s;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+

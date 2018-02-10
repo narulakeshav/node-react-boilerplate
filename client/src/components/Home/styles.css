@@ -1,0 +1,67 @@
+/* stylelint-disable */
+/* stylelint-disable */
+/* stylelint-enable */
+h1,
+h2 {
+  font-family: serif !important;
+  font-weight: 900 !important; }
+
+a,
+span,
+ul li,
+label,
+input,
+textarea,
+button,
+p {
+  letter-spacing: 0.55px; }
+
+h1 {
+  font-size: 3.5rem;
+  letter-spacing: 0.65px;
+  line-height: 1.1; }
+
+h2 {
+  font-size: 3rem;
+  letter-spacing: 0.65px;
+  line-height: 1.1; }
+
+h3 {
+  font-size: 2.25rem;
+  letter-spacing: 0.65px;
+  line-height: 1.1; }
+
+h4 {
+  font-size: 1.7rem;
+  letter-spacing: 0.65px;
+  line-height: 1.1; }
+
+h5 {
+  font-size: 1.25rem;
+  letter-spacing: 0.65px;
+  line-height: 1.1; }
+
+h6 {
+  font-size: 1rem;
+  letter-spacing: 0.65px;
+  line-height: 1.1; }
+
+/* stylelint-disable */
+/* stylelint-enable */
+/* stylelint-disable */
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+.home {
+  background: #F6F7F8;
+  min-height: 100vh;
+  padding: 4rem 0; }
+  .home h1 {
+    margin-bottom: 1rem; }
+  .home p {
+    color: #606374;
+    font: 400 1rem sans-serif, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Roboto";
+    line-height: 150%; }

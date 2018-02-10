@@ -1,0 +1,11 @@
+{
+  "verbose": true,
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "js": "node --harmony",
+  "ext": "js",
+  "ignore": [
+    "test"
+  ]
+}

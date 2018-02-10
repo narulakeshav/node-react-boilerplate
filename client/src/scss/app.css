@@ -1,0 +1,151 @@
+h1,
+h2 {
+  font-family: serif !important;
+  font-weight: 900 !important; }
+
+a,
+span,
+ul li,
+label,
+input,
+textarea,
+button,
+p {
+  letter-spacing: 0.55px; }
+
+h1 {
+  font-size: 3.5rem;
+  letter-spacing: 0.65px;
+  line-height: 1.1; }
+
+h2 {
+  font-size: 3rem;
+  letter-spacing: 0.65px;
+  line-height: 1.1; }
+
+h3 {
+  font-size: 2.25rem;
+  letter-spacing: 0.65px;
+  line-height: 1.1; }
+
+h4 {
+  font-size: 1.7rem;
+  letter-spacing: 0.65px;
+  line-height: 1.1; }
+
+h5 {
+  font-size: 1.25rem;
+  letter-spacing: 0.65px;
+  line-height: 1.1; }
+
+h6 {
+  font-size: 1rem;
+  letter-spacing: 0.65px;
+  line-height: 1.1; }
+
+/* stylelint-disable */
+/* stylelint-enable */
+/* stylelint-disable */
+/* stylelint-enable */
+/* stylelint-disable */
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+.is-info {
+  background: #00B0FF; }
+
+.is-primary,
+.is-success {
+  background: #2ECC71; }
+
+.is-warning {
+  background: #FFB300; }
+
+.is-danger {
+  background: #FF3769; }
+
+.is-center {
+  text-align: center; }
+
+.column.is-3-fullhd,
+.column.is-4-desktop {
+  width: 33.3333333%;
+  padding: 1.25rem; }
+
+.column {
+  border-radius: 4px; }
+  .column p {
+    color: #FFFFFF;
+    font: 600 1rem sans-serif, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Roboto"; }
+
+html {
+  font-size: 18px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+::selection {
+  background: #262D38;
+  color: #FFFFFF; }
+
+.normalize, body {
+  outline: 0;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline; }
+
+body {
+  color: #393C4B;
+  font-family: sans-serif, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Roboto";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400; }
+
+a,
+a:focus,
+a:hover {
+  outline: 0;
+  background: transparent;
+  border: none;
+  color: #00D18D;
+  text-decoration: none; }
+
+p,
+span {
+  font-weight: 400;
+  line-height: 1.1; }
+
+.btn,
+.button,
+.btn:focus,
+.button:focus {
+  outline: 0;
+  background: #FFFFFF;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: 0;
+  padding: 10px 20px 11px;
+  box-sizing: border-box;
+  color: #606374;
+  font: 600 1rem sans-serif, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Roboto";
+  line-height: 18px;
+  cursor: pointer !important;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  transition: all 0.4s; }
+
+.is-center {
+  text-align: center; }
+
+.card {
+  background: #FFFFFF;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px #dfe3e6;
+  margin-bottom: 1.75rem;
+  padding: 1rem; }

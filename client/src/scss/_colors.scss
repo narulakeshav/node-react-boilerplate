@@ -1,0 +1,87 @@
+// Homeroom Color Scheme
+$app-primary: #00D18D;
+
+$theme: (
+  lighter: lighten($app-primary, 55%),
+  light: lighten($app-primary, 20%),
+  base: $app-primary,
+  dark: darken($app-primary, 4.5%),
+  darker: darken($app-primary, 10%),
+  primary: $app-primary,
+  secondary: darken($app-primary, 4.5%),
+  compliment: #FF5D52,
+);
+
+// Text Colors for html tags
+$text: (
+  lighter: #BFC2CC,
+  light: #9498A5,
+  base: #606374,
+  dark: #393C4B,
+  darker: #262D38,
+);
+
+// For Success, Danger, etc. actions
+$actions: (
+  success: #2ECC71,
+  error: #FF3769,
+  warning: #FFB300,
+  info: #00B0FF,
+);
+
+// Main Colors
+$white: #FFFFFF;
+$bg: #F6F7F8;
+$black: map-get($text, darker);
+$transparent: transparent;
+
+/* stylelint-disable */
+
+// Returns the text color
+// usage: color(dark)
+
+@function color($color) {
+  @if not map-has-key($text, $color) {
+    @warn "No layer found for `#{$color}` in $text map. Property omitted.";
+  }
+
+  @return map-get($text, $color);
+}
+
+// Returns the theme color
+// usage: theme(primary)
+
+@function theme($color) {
+  @if not map-has-key($theme, $color) {
+    @warn "No layer found for `#{$color}` in $theme map. Property omitted.";
+  }
+
+  @return map-get($theme, $color);
+}
+
+// Returns color for expected action
+// usage: action(error)
+
+@function action($color) {
+  @if not map-has-key($actions, $color) {
+    @warn "No layer found for `#{$color}` in $actions map. Property omitted.";
+  }
+
+  @return map-get($actions, $color);
+}
+
+// usage: light-opacity(0.6)
+// instead of: rgba(255,255,255,0.6)
+
+@function light-opacity($opacity) {
+  @return rgba(255, 255, 255, $opacity);
+}
+
+// usage: dark-opacity(0.6)
+// instead of: rgba(0,0,0,0.6)
+
+@function dark-opacity($opacity) {
+  @return rgba(0, 0, 0, $opacity);
+}
+
+/* stylelint-enable */

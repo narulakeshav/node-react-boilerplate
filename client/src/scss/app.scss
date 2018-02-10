@@ -1,0 +1,110 @@
+// Global SCSS file for the Homeroom application
+// Contains the needed scss configurations and
+// stylings from files such as _colors.scss, _font.scss,
+// _functions.scss and _base.scss.
+
+@import '_font';
+@import '_colors';
+@import '_mixins';
+@import '_bulma-fix';
+
+html {
+  font-size: 18px; // 1rem = 16px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+::selection {
+  background: color(darker);
+  color: $white;
+}
+
+.normalize {
+  outline: 0;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+body {
+  // Normalize here...
+  color: color(dark);
+  font-family: $font;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: font-weight(normal);
+
+  @extend .normalize;
+}
+
+a,
+a:focus,
+a:hover {
+  outline: 0;
+  background: $transparent;
+  border: none;
+  color: theme(primary);
+  text-decoration: none;
+}
+
+p,
+span {
+  font-weight: font-weight(normal);
+  line-height: 1.1;
+}
+
+.btn,
+.button,
+.btn:focus,
+.button:focus {
+  outline: 0;
+  background: $white;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: 0;
+  padding: 10px 20px 11px;
+  box-sizing: border-box;
+  color: color(base);
+  font: font-weight(semi) font-size(md) $font;
+  line-height: 18px;
+  cursor: pointer !important;
+
+  @include transition(0.4s);
+}
+
+.is-center {
+  text-align: center;
+}
+
+.card {
+  background: $white;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px darken($bg, 8%);
+  margin-bottom: 1.75rem;
+  padding: 1rem;
+}
+
+// z-index
+$z-index: (
+  highest: 10000,
+  higher: 1000,
+  high: 100,
+  default: 0,
+  low: -10,
+  lower: -100,
+  lowest: -1000,
+);
+
+// Setting z-index property on element
+// usage: z(higher)
+
+@function z($layer) {
+  @if not map-has-key($z-index, $layer) {
+    @warn "No layer found for `#{$layer}` in $z-index map. Property omitted.";
+  }
+
+  @return map-get($z-index, $layer);
+}

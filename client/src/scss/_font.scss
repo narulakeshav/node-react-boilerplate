@@ -1,0 +1,80 @@
+// We're going to be using the default font provided by
+// the system. Works with Mac, Windows, and Linux.
+
+$font: sans-serif, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Roboto';
+$serif: serif;
+
+// Font Weights
+$font-weight: (
+  light: 300,
+  normal: 400,
+  medium: 500,
+  semi: 600,
+  bold: 700,
+  heavy: 900,
+);
+
+// Font size for Headings
+$font-size: (
+  xs: 0.7rem,
+  sm: 0.85rem,
+  md: 1rem,
+  lg: 1.15rem,
+  p: 1rem,
+  h6: 1rem,
+  h5: 1.25rem,
+  h4: 1.7rem,
+  h3: 2.25rem,
+  h2: 3rem,
+  h1: 3.5rem,
+);
+
+h1,
+h2 {
+  font-family: $serif !important;
+  font-weight: 900 !important;
+}
+
+a,
+span,
+ul li,
+label,
+input,
+textarea,
+button,
+p {
+  letter-spacing: 0.55px;
+}
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-size: map-get($font-size, h#{$i});
+    letter-spacing: 0.65px;
+    line-height: 1.1;
+  }
+}
+
+/* stylelint-disable */
+
+// Return the font weight
+// usage: font-weight(medium)
+
+@function font-weight($weight) {
+  @if not map-has-key($font-weight, $weight) {
+    @warn "No layer found for `#{$weight}` in $font-weight map. Property omitted.";
+  }
+
+  @return map-get($font-weight, $weight);
+}
+
+// Return the corresponding font-size
+// usage: font-size(p) or font-size(md)
+
+@function font-size($size) {
+  @if not map-has-key($font-size, $size) {
+    @warn "No layer found for `#{$size}` in $font-size map. Property omitted.";
+  }
+
+  @return map-get($font-size, $size);
+}
+/* stylelint-enable */

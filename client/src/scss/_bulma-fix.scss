@@ -1,0 +1,35 @@
+.is-info {
+  background: action(info);
+}
+
+.is-primary,
+.is-success {
+  background: action(success);
+}
+
+.is-warning {
+  background: action(warning);
+}
+
+.is-danger {
+  background: action(error);
+}
+
+.is-center {
+  text-align: center;
+}
+
+.column.is-3-fullhd,
+.column.is-4-desktop {
+  width: 33.3333333%;
+  padding: 1.25rem;
+}
+
+.column {
+  border-radius: 4px;
+
+  p {
+    color: $white;
+    font: font-weight(semi) font-size(p) $font;
+  }
+}

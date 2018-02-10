@@ -9,7 +9,7 @@
 /**
  * Local Variables
  */
-const MONGO_URI = 'mongodb://homeroom-dev:h0m3r88m1234!@ds115035.mlab.com:15035/homeroom-dev';
+const MONGO_URI = 'YOUR_MONGO_URI';
 const COOKIE_SECRET = 'helloworld';
 
 export default {

@@ -112,13 +112,13 @@ a:hover {
   outline: 0;
   background: transparent;
   border: none;
-  color: #00D18D;
+  color: #0084FF;
   text-decoration: none; }
 
-p,
-span {
-  font-weight: 400;
-  line-height: 1.1; }
+p {
+  color: #606374 !important;
+  font: 400 1rem sans-serif, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Roboto" !important;
+  line-height: 175% !important; }
 
 .btn,
 .button,
@@ -139,6 +139,18 @@ span {
   -moz-transition: all 0.4s;
   -ms-transition: all 0.4s;
   transition: all 0.4s; }
+
+code {
+  background: #f0f2f4;
+  border-radius: 20px;
+  color: #393C4B;
+  font: 500 1rem "Inconsolata", monospace; }
+
+pre {
+  background: #262D38;
+  border-radius: 4px;
+  margin: 1rem 0;
+  color: #FFFFFF; }
 
 .is-center {
   text-align: center; }

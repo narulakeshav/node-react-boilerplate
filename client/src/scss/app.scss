@@ -50,10 +50,10 @@ a:hover {
   text-decoration: none;
 }
 
-p,
-span {
-  font-weight: font-weight(normal);
-  line-height: 1.1;
+p {
+  color: color(base) !important;
+  font: font-weight(normal) font-size(md) $font !important;
+  line-height: 175% !important;
 }
 
 .btn,
@@ -73,6 +73,20 @@ span {
   cursor: pointer !important;
 
   @include transition(0.4s);
+}
+
+code {
+  background: darken($bg, 2%);
+  border-radius: 20px;
+  color: color(dark);
+  font: font-weight(medium) font-size(md) 'Inconsolata', monospace;
+}
+
+pre {
+  background: color(darker);
+  border-radius: 4px;
+  margin: 1rem 0;
+  color: $white;
 }
 
 .is-center {

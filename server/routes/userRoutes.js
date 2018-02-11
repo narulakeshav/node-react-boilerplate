@@ -49,15 +49,17 @@ const userRoutes = (app) => {
    */
 	app.post('/api/user', async (req, res) => {
 		const serializedUser = {
-			name: 'Keshav Narula',
-			email: 'narulakeshav13@gmail.com',
-			password: 'Knarula97',
-			username: 'keshav',
+			name: 'Joe Doe',
+			email: 'joe.doe@gmail.com',
+			password: 'test',
+			username: 'joe.doe',
 			photo: DEFAULT_USER_ICON
 		};
 
 		try {
-			res.send(serializedUser);
+			const user = await new User(serializedUser).save();
+
+			res.send(user);
 		} catch (err) {
 			res.status(500).send('Error occured during registeration.');
 		}

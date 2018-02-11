@@ -122,9 +122,9 @@ server
 - `routes`: routes for the entire backend app
 - `index.js`: main server file
 
-# Contribution
+## Contribution
 This boilerplate is an open-sourced project. Any contribution is welcomed. I will add you to the **Acknowledgements** section below.
 
-# Acknowledgements
+## Acknowledgements
 Thank you to these authors for contribution.
 - [@narulakeshav](https://github.com/narulakeshav)

@@ -56,12 +56,8 @@ h6 {
     opacity: 1; } }
 
 .home {
-  background: #F6F7F8;
+  background: #FFFFFF;
   min-height: 100vh;
-  padding: 4rem 0; }
+  padding: 6rem 0; }
   .home h1 {
-    margin-bottom: 1rem; }
-  .home p {
-    color: #606374;
-    font: 400 1rem sans-serif, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Roboto";
-    line-height: 150%; }
+    margin-bottom: 1.5rem; }

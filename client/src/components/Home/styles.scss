@@ -1,17 +1,11 @@
 @import 'scss/_base';
 
 .home {
-  background: $bg;
+  background: $white;
   min-height: 100vh;
-  padding: 4rem 0;
+  padding: 6rem 0;
 
   h1 {
-    margin-bottom: 1rem;
-  }
-
-  p {
-    color: color(base);
-    font: font-weight(normal) font-size(md) $font;
-    line-height: 150%;
+    margin-bottom: 1.5rem;
   }
 }
